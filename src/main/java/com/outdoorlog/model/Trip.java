@@ -4,9 +4,9 @@ import java.util.Date;
 import java.util.List;
 
 public class Trip {
-    private User leader;
-    private List<User> partyMembers;
-    private Destination destination;
+    private com.outdoorlog.model.User leader;
+    private List<com.outdoorlog.model.User> partyMembers;
+    private com.outdoorlog.model.Destination destination;
     private Date startTime;
     private Date expectedEndTime;
 
