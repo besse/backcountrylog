@@ -6,4 +6,5 @@ public class Destination {
     private String description;
     private double latitude;
     private double longitude;
+
 }

@@ -1,12 +1,20 @@
 package com.outdoorlog.model;
 
+import org.bson.types.ObjectId;
+import org.mongodb.morphia.annotations.Embedded;
+import org.mongodb.morphia.annotations.Id;
+
 public class Contact {
+
+    @Id
+    private ObjectId id;
 
     private String firstName;
     private String lastName;
     private String phoneNumber;
     private String emailAddress;
-    private String addressLine1;
-    private String addressLine2;
+
+    @Embedded
+    private Address address;
 
 }
