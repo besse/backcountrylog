@@ -1,6 +1,6 @@
-package com.outdoorlog.model;
+package com.backcountrylog.model;
 
-import com.outdoorlog.mongo.MongoUtil;
+import com.backcountrylog.mongo.MongoUtil;
 import org.bson.types.ObjectId;
 import org.mongodb.morphia.Key;
 import org.mongodb.morphia.dao.BasicDAO;
@@ -17,7 +17,7 @@ import java.util.List;
 public class UserDao extends BasicDAO<User, ObjectId> {
 
     public UserDao() throws UnknownHostException {
-        super(MongoUtil.getMongoClient(), MongoUtil.getMorphia(), "outdoorlog");
+        super(MongoUtil.getMongoClient(), MongoUtil.getMorphia(), "backcountrylog");
     }
 
     public List<User> findAll() {

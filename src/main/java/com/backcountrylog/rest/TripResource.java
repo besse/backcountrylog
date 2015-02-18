@@ -1,7 +1,7 @@
-package com.outdoorlog.rest;
+package com.backcountrylog.rest;
 
-import com.outdoorlog.model.Trip;
-import com.outdoorlog.model.TripDao;
+import com.backcountrylog.model.Trip;
+import com.backcountrylog.model.TripDao;
 import org.bson.types.ObjectId;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

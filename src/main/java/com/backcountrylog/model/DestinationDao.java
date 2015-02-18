@@ -1,6 +1,6 @@
-package com.outdoorlog.model;
+package com.backcountrylog.model;
 
-import com.outdoorlog.mongo.MongoUtil;
+import com.backcountrylog.mongo.MongoUtil;
 import org.bson.types.ObjectId;
 import org.mongodb.morphia.Key;
 import org.mongodb.morphia.dao.BasicDAO;

@@ -1,7 +1,7 @@
-package com.outdoorlog.model;
+package com.backcountrylog.model;
 
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
-import com.outdoorlog.mongo.util.ObjectIDSerializer;
+import com.backcountrylog.mongo.util.ObjectIDSerializer;
 import org.bson.types.ObjectId;
 import org.mongodb.morphia.annotations.Embedded;
 import org.mongodb.morphia.annotations.Id;

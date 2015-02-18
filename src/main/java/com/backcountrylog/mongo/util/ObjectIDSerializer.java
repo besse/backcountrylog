@@ -1,4 +1,4 @@
-package com.outdoorlog.mongo.util;
+package com.backcountrylog.mongo.util;
 
 import com.fasterxml.jackson.core.JsonGenerator;
 import com.fasterxml.jackson.core.JsonProcessingException;

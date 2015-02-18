@@ -1,7 +1,7 @@
-package com.outdoorlog.rest;
+package com.backcountrylog.rest;
 
-import com.outdoorlog.model.Destination;
-import com.outdoorlog.model.DestinationDao;
+import com.backcountrylog.model.Destination;
+import com.backcountrylog.model.DestinationDao;
 
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;

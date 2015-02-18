@@ -1,4 +1,4 @@
-package com.outdoorlog.rest;
+package com.backcountrylog.rest;
 
 import org.glassfish.jersey.server.ResourceConfig;
 import org.glassfish.jersey.test.JerseyTest;

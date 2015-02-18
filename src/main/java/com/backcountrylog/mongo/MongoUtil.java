@@ -1,4 +1,4 @@
-package com.outdoorlog.mongo;
+package com.backcountrylog.mongo;
 
 import com.mongodb.MongoClient;
 import org.mongodb.morphia.Datastore;

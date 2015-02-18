@@ -1,4 +1,4 @@
-package com.outdoorlog.background;
+package com.backcountrylog.background;
 
 /**
  * Created for Outdoorlog

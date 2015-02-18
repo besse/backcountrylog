@@ -1,4 +1,4 @@
-package com.outdoorlog.model;
+package com.backcountrylog.model;
 
 import org.mongodb.morphia.annotations.Embedded;
 

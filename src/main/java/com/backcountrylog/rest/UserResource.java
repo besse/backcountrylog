@@ -1,7 +1,7 @@
-package com.outdoorlog.rest;
+package com.backcountrylog.rest;
 
-import com.outdoorlog.model.User;
-import com.outdoorlog.model.UserDao;
+import com.backcountrylog.model.User;
+import com.backcountrylog.model.UserDao;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
