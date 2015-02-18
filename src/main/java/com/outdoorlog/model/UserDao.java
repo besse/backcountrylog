@@ -1,11 +1,11 @@
 package com.outdoorlog.model;
 
-import com.mongodb.MongoClient;
+import com.outdoorlog.mongo.MongoUtil;
 import org.bson.types.ObjectId;
 import org.mongodb.morphia.Key;
-import org.mongodb.morphia.Morphia;
 import org.mongodb.morphia.dao.BasicDAO;
 
+import java.net.UnknownHostException;
 import java.util.List;
 
 /**
@@ -16,8 +16,8 @@ import java.util.List;
  */
 public class UserDao extends BasicDAO<User, ObjectId> {
 
-    public UserDao(Morphia morphia, MongoClient mongoClient) {
-        super(mongoClient, morphia, "outdoorlog");
+    public UserDao() throws UnknownHostException {
+        super(MongoUtil.getMongoClient(), MongoUtil.getMorphia(), "outdoorlog");
     }
 
     public List<User> findAll() {

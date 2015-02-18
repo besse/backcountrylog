@@ -2,14 +2,13 @@ package com.outdoorlog.rest;
 
 import com.outdoorlog.model.User;
 import com.outdoorlog.model.UserDao;
-import com.outdoorlog.mongo.MongoUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
+import javax.ws.rs.core.Response;
 import java.net.UnknownHostException;
-import java.util.List;
 
 
 /**
@@ -27,15 +26,25 @@ public class UserResource {
     private UserDao userDao;
 
     public UserResource() throws UnknownHostException {
-        userDao = new UserDao(MongoUtil.getMorphia(), MongoUtil.getMongoClient());
+        userDao = new UserDao();
     }
 
 
     @GET
     @Produces(MediaType.APPLICATION_JSON)
-    public List<User> getUsers() throws UnknownHostException {
+    public Response getUsers() throws UnknownHostException {
         logger.info("Listing all users");
-        return userDao.findAll();
+        //return userDao.findAll();
+        return Response.ok(userDao.findAll()).build();
+    }
+
+    @GET
+    @Produces(MediaType.APPLICATION_JSON)
+    @Path("/{userId}")
+    public User getUserById(@PathParam("userId") String userId) {
+
+
+        return userDao.findById(userId);
 
     }
 
@@ -44,16 +53,6 @@ public class UserResource {
     public void createUser(User user) throws UnknownHostException {
         userDao.save(user);
         logger.info("Successfully saved user: " + user.toString());
-    }
-
-    @GET
-    @Produces(MediaType.APPLICATION_JSON)
-    @Path("/{userId}")
-    public User getMsg(@PathParam("userId") String userId) {
-
-
-        return  userDao.findById(userId);
-
     }
 
 }

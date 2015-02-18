@@ -1,17 +1,25 @@
 package com.outdoorlog.model;
 
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import com.outdoorlog.mongo.util.ObjectIDSerializer;
 import org.bson.types.ObjectId;
+import org.mongodb.morphia.annotations.Entity;
 import org.mongodb.morphia.annotations.Id;
 import org.mongodb.morphia.annotations.Reference;
 
 import java.util.Date;
 import java.util.List;
 
+@Entity(value = "trip", noClassnameStored = true)
 public class Trip {
 
+    @JsonSerialize(using = ObjectIDSerializer.class)
     @Id
     private ObjectId id;
+
+    @Reference
     private User leader;
+
     @Reference("partyMembers")
     private List<User> partyMembers;
 

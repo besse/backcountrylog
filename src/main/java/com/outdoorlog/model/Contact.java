@@ -1,11 +1,14 @@
 package com.outdoorlog.model;
 
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import com.outdoorlog.mongo.util.ObjectIDSerializer;
 import org.bson.types.ObjectId;
 import org.mongodb.morphia.annotations.Embedded;
 import org.mongodb.morphia.annotations.Id;
 
 public class Contact {
 
+    @JsonSerialize(using = ObjectIDSerializer.class)
     @Id
     private ObjectId id;
 
